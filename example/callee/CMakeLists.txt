@@ -9,6 +9,7 @@ add_executable(server ${SERVER_SRCS} ${PROTO_SRCS})
 
 #链接必要的库，尤其是example中生成的静态库
 target_link_libraries(server krpc_core ${LIBS})
+target_link_options(server PRIVATE -no-pie)
 
 #设置编译选项
 target_compile_options(server PRIVATE -std=c++11 -Wall)

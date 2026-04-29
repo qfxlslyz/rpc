@@ -16,11 +16,11 @@ include_directories(${Protobuf_INCLUDE_DIRS})#Protobuf_INCLUDE_DIRS表示protobu
 #设置全局链接库
 set(LIBS
     protobuf
-    pthread
     zookeeper_mt
     muduo_net
     muduo_base
     glog
+    pthread
 )
 #添加子目录
 add_subdirectory(src)
